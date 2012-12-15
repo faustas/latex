@@ -1,0 +1,37 @@
+==============================================================
+  Content
+==============================================================
+
+1 .. Create images for the document
+2 .. Compile the document
+3 .. Clean after compilation
+
+--------------------------------------------------------------
+1 Create images for the document
+--------------------------------------------------------------
+
+a) Create .eps files
+b) Open a terminal and rationalize the .eps files with
+   eps2eps FILE.eps
+
+--------------------------------------------------------------
+2 Compile the document
+--------------------------------------------------------------
+
+a) Open a terminal
+b) Use the makefile
+	 make tex	-> create .dvi file
+	 make dvi	-> create .ps file
+	 make pdf	-> create .pdf file
+	 make all	-> everything above
+	 make PDF	-> view PDF file
+
+--------------------------------------------------------------
+3 Clean after compilation
+--------------------------------------------------------------
+
+a) Open a terminal
+b) Install latexmk
+   e.g. sudo apt-get install latexmk
+c) Use the makefile
+   make clean

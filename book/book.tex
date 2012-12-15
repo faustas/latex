@@ -1,0 +1,64 @@
+\documentclass[11pt,a4paper,oneside]{book}	% definition book
+\usepackage[utf8x]{inputenc}				% encoding
+\usepackage[T1]{fontenc}    				% hyphenation special chars
+%\usepackage[ngerman]{babel}				% German grammar rules
+\usepackage[english]{babel}					% English grammar rules
+\usepackage{ucs}							% extended utf-8 support
+\usepackage{amsmath}						% writing math formulas
+\usepackage{amsfonts}						% math fonts
+\usepackage{amssymb}						
+\usepackage{makeidx}
+\usepackage{showidx}
+\usepackage[dvips]{graphicx}           		% to include images
+\usepackage{pslatex}	    				% to use PostScript fonts
+
+%
+% Command
+%
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+% ==================================================================
+% General Settings
+% ==================================================================
+
+\makeindex
+
+% ==================================================================
+% Document
+% ==================================================================
+
+\begin{document}
+% ----------------------------------
+% front
+% ----------------------------------
+\frontmatter								% roman numerals for page numbers
+\input{titlepage}
+\tableofcontents
+\listoffigures
+\listoftables
+
+% ----------------------------------
+% main
+% ----------------------------------
+\mainmatter									% chapter numbering
+
+\part{Examples}
+\include{simple_image}
+
+% ----------------------------------
+% appendix
+% ----------------------------------
+\appendix
+
+% ----------------------------------
+% back
+% ----------------------------------
+\backmatter
+% add literature list to table of contents
+\addcontentsline{toc}{part}{Literature}
+% show literature list
+\bibliographystyle{alpha}
+\bibliography{book}
+
+\end{document}
