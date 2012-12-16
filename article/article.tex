@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper,oneside,titlepage]{article}
+\usepackage[utf8x]{inputenc}				% encoding
+\usepackage[T1]{fontenc}    				% hyphenation special chars
+%\usepackage[ngerman]{babel}				% German grammar rules
+\usepackage[english]{babel}					% English grammar rules
+\usepackage{ucs}							% extended utf-8 support
+\usepackage{amsmath}						% writing math formulas
+\usepackage{amsfonts}						% math fonts
+\usepackage{amssymb}						
+\usepackage{makeidx}
+\usepackage{showidx}
+\usepackage[dvips]{graphicx}           		% to include images
+\usepackage{pslatex}	    				% to use PostScript fonts
+
+\author{AUTHOR}
+\title{TITLE}
+
+% ==================================================================
+% General Settings
+% ==================================================================
+
+\makeindex
+
+% ==================================================================
+% Document
+% ==================================================================
+
+\begin{document}
+% ----------------------------------
+% front
+% ----------------------------------
+\maketitle
+\pagestyle{empty}
+\tableofcontents
+
+\newpage
+
+% ----------------------------------
+% main
+% ----------------------------------
+\pagestyle{plain}
+\section{Section 1}
+We cite from Mr. Example \cite[p.1]{book2000}
+
+\newpage
+\pagestyle{empty}
+% add literature list to table of contents
+\addcontentsline{toc}{part}{Literature}
+% show literature list
+\bibliographystyle{alpha}
+\bibliography{article}
+
+\end{document}
